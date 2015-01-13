@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="finanzasPU" transaction-type="RESOURCE_LOCAL">
+    <provider>oracle.toplink.essentials.PersistenceProvider</provider>
+    <class>estadosfinancieros.Cuenta</class>
+    <class>estadosfinancieros.Esquema</class>
+    <class>estadosfinancieros.Balance</class>
+    <class>estadosfinancieros.Empresa</class>
+    <class>estadosfinancieros.Cargo</class>
+    <class>estadosfinancieros.Abono</class>
+    <class>estadosfinancieros.Operacion</class>
+    
+    <properties>
+      <property name="toplink.jdbc.user" value="root"/>
+      <property name="toplink.jdbc.password" value="sxceron345"/>
+      <property name="toplink.jdbc.url" value="jdbc:derby:finanzas"/>
+      <property name="toplink.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+    </properties>
+    <!--<properties>
+      <property name="toplink.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/finanzas"/>
+      <property name="toplink.jdbc.user" value="root"/>
+      <property name="toplink.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="toplink.jdbc.password" value="samurai1"/>
+      <property name="toplink.ddl-generation" value="create-tables"/>
+    </properties>-->
+  </persistence-unit>
+</persistence>

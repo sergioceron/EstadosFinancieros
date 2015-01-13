@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="504" pageHeight="432" columnWidth="464" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<parameter name="empresa" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="liquidez" class="java.lang.Double"/>
+	<parameter name="solvencia" class="java.lang.Double"/>
+	<parameter name="estabilidad" class="java.lang.Double"/>
+	<parameter name="inmovilizacion" class="java.lang.Double"/>
+	<parameter name="rentabilidad1" class="java.lang.Double"/>
+	<parameter name="rentabilidad2" class="java.lang.Double"/>
+	<parameter name="liquidez_1" class="java.lang.Double"/>
+	<parameter name="solvencia_1" class="java.lang.Double"/>
+	<parameter name="estabilidad_1" class="java.lang.Double"/>
+	<parameter name="inmovilizacion_1" class="java.lang.Double"/>
+	<parameter name="rentabilidad1_1" class="java.lang.Double"/>
+	<parameter name="rentabilidad2_1" class="java.lang.Double"/>
+	<parameter name="diff_1" class="java.lang.Double"/>
+	<parameter name="diff_2" class="java.lang.Double"/>
+	<parameter name="diff_3" class="java.lang.Double"/>
+	<parameter name="diff_4" class="java.lang.Double"/>
+	<parameter name="diff_5" class="java.lang.Double"/>
+	<parameter name="diff_6" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[SELECT
+     CARGO.`ID` AS CARGO_ID,
+     CARGO.`CONCEPTO` AS CARGO_CONCEPTO,
+     CARGO.`CANTIDAD` AS CARGO_CANTIDAD,
+     CARGO.`OPERACION_ID` AS CARGO_OPERACION_ID,
+     CARGO.`ESQUEMA_ID` AS CARGO_ESQUEMA_ID
+FROM
+     `CARGO` CARGO]]>
+	</queryString>
+	<field name="CARGO_ID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="6" width="464" height="34"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="40" width="464" height="20"/>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="30" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CARGO_ID}.toString()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="327">
+			<staticText>
+				<reportElement x="32" y="58" width="70" height="16"/>
+				<textElement/>
+				<text><![CDATA[Liquidez:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="87" width="70" height="16"/>
+				<textElement/>
+				<text><![CDATA[Solvencia::]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="114" width="70" height="28"/>
+				<textElement/>
+				<text><![CDATA[Estabilidad Económica:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="154" width="70" height="32"/>
+				<textElement/>
+				<text><![CDATA[Inmovilización de capital:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="200" width="70" height="28"/>
+				<textElement/>
+				<text><![CDATA[Rentabilidad en ventas::]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="242" width="70" height="32"/>
+				<textElement/>
+				<text><![CDATA[Rentabilidad en inversión]]></text>
+			</staticText>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="125" y="58" width="50" height="16"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{liquidez}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="125" y="87" width="50" height="16"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{solvencia}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="125" y="125" width="50" height="17"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{estabilidad}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="125" y="170" width="50" height="16"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{inmovilizacion}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="125" y="212" width="50" height="16"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{rentabilidad1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="125" y="258" width="50" height="16"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{rentabilidad2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="32" y="13" width="70" height="32"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fenomeno Económico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="13" width="70" height="32"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Razones Financieras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="13" width="59" height="32"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Razones Estandar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="13" width="166" height="14"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diferencias]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="31" width="81" height="14"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="31" width="81" height="14"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="218" y="125" width="51" height="17"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{estabilidad_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="218" y="58" width="51" height="16"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{liquidez_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="218" y="212" width="51" height="16"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{rentabilidad1_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="218" y="87" width="51" height="16"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{solvencia_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="218" y="170" width="51" height="16"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{inmovilizacion_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="218" y="258" width="51" height="16"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{rentabilidad2_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="288" y="58" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_1}.doubleValue()>=0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{diff_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="288" y="87" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_2}.doubleValue()>=0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{diff_2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="288" y="126" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_3}.doubleValue()>=0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{diff_3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="288" y="170" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_4}.doubleValue()>=0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{diff_4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="288" y="212" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_5}.doubleValue()>=0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{diff_5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="292" y="258" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_6}.doubleValue()>=0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{diff_6}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="373" y="212" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_5}.doubleValue()<0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{diff_5}.doubleValue()*-1.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="377" y="258" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_6}.doubleValue()<0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{diff_6}.doubleValue()*-1.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="373" y="58" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_1}.doubleValue()<0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{diff_1}.doubleValue()*-1.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="373" y="170" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_4}.doubleValue()<0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{diff_4}.doubleValue()*-1.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="373" y="87" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_2}.doubleValue()<0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{diff_2}.doubleValue()*-1.0)]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="373" y="126" width="81" height="16">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{diff_3}.doubleValue()<0.0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{diff_3}.doubleValue()*-1.0)]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="32" y="50" width="426" height="1"/>
+			</line>
+		</band>
+	</pageHeader>
+</jasperReport>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="864" pageHeight="1224" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<parameter name="ventas" class="java.lang.Double"/>
+	<parameter name="costoventas" class="java.lang.Double"/>
+	<parameter name="utilidadbruta" class="java.lang.Double"/>
+	<parameter name="gastosventas" class="java.lang.Double"/>
+	<parameter name="gastosadministracion" class="java.lang.Double"/>
+	<parameter name="gastosfinancieros" class="java.lang.Double"/>
+	<parameter name="productosfinancieros" class="java.lang.Double"/>
+	<parameter name="utilidadoperacion" class="java.lang.Double"/>
+	<parameter name="otrosgastos" class="java.lang.Double"/>
+	<parameter name="otrosproductos" class="java.lang.Double"/>
+	<parameter name="utilidadadi" class="java.lang.Double"/>
+	<parameter name="isr" class="java.lang.Double"/>
+	<parameter name="ptu" class="java.lang.Double"/>
+	<parameter name="utlidadneta" class="java.lang.Double"/>
+	<parameter name="impuestos" class="java.lang.Double"/>
+	<parameter name="otros" class="java.lang.Double"/>
+	<parameter name="financieros" class="java.lang.Double"/>
+	<parameter name="gastos" class="java.lang.Double"/>
+	<parameter name="gastosyproductos" class="java.lang.Double"/>
+	<parameter name="empresa" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="b2" class="java.lang.String"/>
+	<parameter name="ventas_a" class="java.lang.Double"/>
+	<parameter name="costoventas_a" class="java.lang.Double"/>
+	<parameter name="utilidadbruta_a" class="java.lang.Double"/>
+	<parameter name="gastosyproductos_a" class="java.lang.Double"/>
+	<parameter name="utilidadoperacion_a" class="java.lang.Double"/>
+	<parameter name="otrosgastos_a" class="java.lang.Double"/>
+	<parameter name="otrosproductos_a" class="java.lang.Double"/>
+	<parameter name="utilidadadi_a" class="java.lang.Double"/>
+	<parameter name="impuestos_a" class="java.lang.Double"/>
+	<parameter name="utlidadneta_a" class="java.lang.Double"/>
+	<parameter name="b1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     CARGO.`ID` AS CARGO_ID,
+     CARGO.`CONCEPTO` AS CARGO_CONCEPTO,
+     CARGO.`CANTIDAD` AS CARGO_CANTIDAD,
+     CARGO.`OPERACION_ID` AS CARGO_OPERACION_ID,
+     CARGO.`ESQUEMA_ID` AS CARGO_ESQUEMA_ID
+FROM
+     `CARGO` CARGO]]>
+	</queryString>
+	<field name="CARGO_ID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<textField>
+				<reportElement x="246" y="16" width="305" height="34"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="40" width="518" height="20"/>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Estado de Resultados Comparativo"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="30" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CARGO_ID}.toString()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="381">
+			<staticText>
+				<reportElement x="23" y="34" width="100" height="16"/>
+				<textElement/>
+				<text><![CDATA[Ventas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="50" width="100" height="16"/>
+				<textElement/>
+				<text><![CDATA[Menos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="66" width="100" height="16"/>
+				<textElement/>
+				<text><![CDATA[Costo de ventas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="82" width="100" height="16"/>
+				<textElement/>
+				<text><![CDATA[Utilidad bruta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="98" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<text><![CDATA[Menos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="130" width="111" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{utilidadoperacion}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Utilidad de operacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="146" width="100" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{otrosgastos}!=null||$P{otrosgastos_a}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Menos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="162" width="100" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{otrosgastos}!=null||$P{otrosgastos_a}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Otros gastos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="210" width="139" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{impuestos}!=null||$P{impuestos_a}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Utilidad antes de impuestos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="226" width="100" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{impuestos}!=null||$P{impuestos_a}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Impuestos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="242" width="100" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{utlidadneta}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Utilidad neta]]></text>
+			</staticText>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="315" y="34" width="100" height="16"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{ventas}]]></textFieldExpression>
+			</textField>
+			<textField pattern=" #,##0.00">
+				<reportElement x="315" y="66" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{costoventas}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="315" y="82" width="100" height="16"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{utilidadbruta}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="315" y="130" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{utilidadoperacion}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="315" y="114" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{gastosyproductos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="178" width="100" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{otrosproductos}!=null||$P{otrosproductos_a}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Mas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="194" width="100" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[Boolean.valueOf($P{otrosproductos}!=null||$P{otrosproductos_a}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Otros productos]]></text>
+			</staticText>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="315" y="210" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{utilidadadi}]]></textFieldExpression>
+			</textField>
+			<textField pattern=" #,##0.00" isBlankWhenNull="true">
+				<reportElement x="315" y="226" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{impuestos}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="315" y="242" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{utlidadneta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="114" width="100" height="16"/>
+				<textElement/>
+				<text><![CDATA[Gastos de operacion]]></text>
+			</staticText>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="315" y="162" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{otrosgastos}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="315" y="194" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{otrosproductos}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="505" y="82" width="100" height="16"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{utilidadbruta_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern=" #,##0.00" isBlankWhenNull="true">
+				<reportElement x="505" y="226" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{impuestos_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="505" y="114" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{gastosyproductos_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="505" y="162" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{otrosgastos_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="505" y="194" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{otrosproductos_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern=" #,##0.00">
+				<reportElement x="505" y="66" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{costoventas_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="505" y="210" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{utilidadadi_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="505" y="130" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{utilidadoperacion_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="505" y="34" width="100" height="16"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{ventas_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="505" y="242" width="100" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{utlidadneta_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="686" y="34" width="71" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{ventas_a}.doubleValue()-$P{ventas}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="686" y="66" width="71" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{costoventas_a}.doubleValue()-$P{costoventas}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="686" y="114" width="71" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{gastosyproductos_a}.doubleValue()-$P{gastosyproductos}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="686" y="130" width="71" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{utilidadoperacion_a}.doubleValue()-$P{utilidadoperacion}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="686" y="162" width="71" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{otrosgastos_a}.doubleValue()-$P{otrosgastos}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="686" y="194" width="71" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{otrosproductos_a}.doubleValue()-$P{otrosproductos}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="686" y="210" width="71" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{utilidadadi_a}.doubleValue()-$P{utilidadadi}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="686" y="226" width="71" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{impuestos_a}.doubleValue()-$P{impuestos}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="686" y="242" width="71" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{utlidadneta_a}.doubleValue()-$P{utlidadneta}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="344" y="9" width="71" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{b1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="534" y="9" width="71" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{b2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="686" y="9" width="71" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Diferencia"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="686" y="82" width="71" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{utilidadbruta_a}.doubleValue()-$P{utilidadbruta}.doubleValue())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="1224" pageHeight="792" orientation="Landscape" columnWidth="1184" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<style name="Crosstab Data Text" isDefault="false" hAlign="Center"/>
+	<style name="under1" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==1)]]></conditionExpression>
+			<style isDefault="false" style="under1" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_1" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==2)]]></conditionExpression>
+			<style isDefault="false" style="under1_1" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_2" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==3)]]></conditionExpression>
+			<style isDefault="false" style="under1_2" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_3" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==4)]]></conditionExpression>
+			<style isDefault="false" style="under1_3" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_4" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==5)]]></conditionExpression>
+			<style isDefault="false" style="under1_4" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_5" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==6)]]></conditionExpression>
+			<style isDefault="false" style="under1_5" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_6" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==7)]]></conditionExpression>
+			<style isDefault="false" style="under1_6" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_7" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==8)]]></conditionExpression>
+			<style isDefault="false" style="under1_7" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_8" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==9)]]></conditionExpression>
+			<style isDefault="false" style="under1_8" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_9" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==10)]]></conditionExpression>
+			<style isDefault="false" style="under1_9" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_10" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==11)]]></conditionExpression>
+			<style isDefault="false" style="under1_10" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_11" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==12)]]></conditionExpression>
+			<style isDefault="false" style="under1_11" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_12" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==13)]]></conditionExpression>
+			<style isDefault="false" style="under1_12" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_13" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==14)]]></conditionExpression>
+			<style isDefault="false" style="under1_13" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_14" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{activoline}.intValue()==15)]]></conditionExpression>
+			<style isDefault="false" style="under1_14" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_15" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{pasivoline}.intValue()==1)]]></conditionExpression>
+			<style isDefault="false" style="under1_15" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_16" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{pasivoline}.intValue()==2)]]></conditionExpression>
+			<style isDefault="false" style="under1_16" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_17" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{pasivoline}.intValue()==3)]]></conditionExpression>
+			<style isDefault="false" style="under1_17" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_18" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{pasivoline}.intValue()==4)]]></conditionExpression>
+			<style isDefault="false" style="under1_18" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_19" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{pasivoline}.intValue()==5)]]></conditionExpression>
+			<style isDefault="false" style="under1_19" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<style name="under1_20" isDefault="false" forecolor="#000000" backcolor="#FFFFFF" fontName="SansSerif" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[Boolean.valueOf($P{pasivoline}.intValue()==6)]]></conditionExpression>
+			<style isDefault="false" style="under1_20" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="dataset1"/>
+	<subDataset name="dataset2"/>
+	<parameter name="empresa" class="java.lang.String"/>
+	<parameter name="activoCirculante" class="java.lang.Boolean"/>
+	<parameter name="activoFijo" class="java.lang.Boolean"/>
+	<parameter name="activoDiferido" class="java.lang.Boolean"/>
+	<parameter name="pasivoCirculante" class="java.lang.Boolean"/>
+	<parameter name="pasivoFijo" class="java.lang.String"/>
+	<parameter name="ac_1" class="java.lang.String"/>
+	<parameter name="ac_2" class="java.lang.String"/>
+	<parameter name="ac_3" class="java.lang.String"/>
+	<parameter name="ac_4" class="java.lang.String"/>
+	<parameter name="ac_5" class="java.lang.String"/>
+	<parameter name="ac_6" class="java.lang.String"/>
+	<parameter name="af_1" class="java.lang.String"/>
+	<parameter name="af_2" class="java.lang.String"/>
+	<parameter name="af_3" class="java.lang.String"/>
+	<parameter name="af_4" class="java.lang.String"/>
+	<parameter name="af_5" class="java.lang.String"/>
+	<parameter name="af_6" class="java.lang.String"/>
+	<parameter name="ad_1" class="java.lang.String"/>
+	<parameter name="ad_2" class="java.lang.String"/>
+	<parameter name="ad_3" class="java.lang.String"/>
+	<parameter name="pc_1" class="java.lang.String"/>
+	<parameter name="pc_2" class="java.lang.String"/>
+	<parameter name="pc_3" class="java.lang.String"/>
+	<parameter name="pf_1" class="java.lang.String"/>
+	<parameter name="pf_2" class="java.lang.String"/>
+	<parameter name="capitalsocial" class="java.lang.String"/>
+	<parameter name="utilidad" class="java.lang.String"/>
+	<parameter name="totalactivo" class="java.lang.Double"/>
+	<parameter name="totalpasivo" class="java.lang.Double"/>
+	<parameter name="totalcapital" class="java.lang.Double"/>
+	<parameter name="pasivoycapital" class="java.lang.Double"/>
+	<parameter name="totalac" class="java.lang.Double"/>
+	<parameter name="totalaf" class="java.lang.Double"/>
+	<parameter name="totalad" class="java.lang.Double"/>
+	<parameter name="ac_1_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ac_2_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ac_3_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ac_4_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ac_5_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ac_6_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_1_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_2_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_3_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_4_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_5_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_6_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ad_1_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ad_2_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ad_3_1" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pc_1_1" class="java.lang.Double"/>
+	<parameter name="pc_2_1" class="java.lang.Double"/>
+	<parameter name="pc_3_1" class="java.lang.Double"/>
+	<parameter name="pf_1_1" class="java.lang.Double"/>
+	<parameter name="pf_2_1" class="java.lang.Double"/>
+	<parameter name="totalac_1" class="java.lang.Double"/>
+	<parameter name="totalac_2" class="java.lang.Double"/>
+	<parameter name="totalac_3" class="java.lang.Double"/>
+	<parameter name="totalac_4" class="java.lang.Double"/>
+	<parameter name="totalac_5" class="java.lang.Double"/>
+	<parameter name="totalac_6" class="java.lang.Double"/>
+	<parameter name="totalaf_1" class="java.lang.Double"/>
+	<parameter name="totalaf_2" class="java.lang.Double"/>
+	<parameter name="totalaf_3" class="java.lang.Double"/>
+	<parameter name="totalaf_4" class="java.lang.Double"/>
+	<parameter name="totalaf_5" class="java.lang.Double"/>
+	<parameter name="totalaf_6" class="java.lang.Double"/>
+	<parameter name="totalad_1" class="java.lang.Double"/>
+	<parameter name="totalad_2" class="java.lang.Double"/>
+	<parameter name="totalad_3" class="java.lang.Double"/>
+	<parameter name="totalpf" class="java.lang.String"/>
+	<parameter name="totalpc_1" class="java.lang.Double"/>
+	<parameter name="totalpc_2" class="java.lang.Double"/>
+	<parameter name="totalpc_3" class="java.lang.Double"/>
+	<parameter name="totalpf_1" class="java.lang.Double"/>
+	<parameter name="totalpf_2" class="java.lang.Double"/>
+	<parameter name="capitals" class="java.lang.Double"/>
+	<parameter name="utilidadn" class="java.lang.Double"/>
+	<parameter name="capital_1" class="java.lang.Double"/>
+	<parameter name="capital_2" class="java.lang.Double"/>
+	<parameter name="pc_4" class="java.lang.String"/>
+	<parameter name="pc_4_1" class="java.lang.Double"/>
+	<parameter name="totalpc_4" class="java.lang.Double"/>
+	<parameter name="activoline" class="java.lang.Integer"/>
+	<parameter name="pasivoline" class="java.lang.Integer"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="ac_1_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ac_2_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ac_3_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ac_4_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ac_5_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ac_6_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_1_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_2_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_3_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_4_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_5_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="af_6_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ad_1_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ad_2_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ad_3_1_a" class="java.lang.Double">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pc_1_1_a" class="java.lang.Double"/>
+	<parameter name="pc_2_1_a" class="java.lang.Double"/>
+	<parameter name="pc_3_1_a" class="java.lang.Double"/>
+	<parameter name="pc_4_1_a" class="java.lang.Double"/>
+	<parameter name="pf_1_1_a" class="java.lang.Double"/>
+	<parameter name="pf_2_1_a" class="java.lang.Double"/>
+	<parameter name="totalpasivo_a" class="java.lang.Double"/>
+	<parameter name="utilidadn_a" class="java.lang.Double"/>
+	<parameter name="capitals_a" class="java.lang.Double"/>
+	<parameter name="totalcapital_a" class="java.lang.Double"/>
+	<parameter name="totalactivo_a" class="java.lang.Double"/>
+	<parameter name="pasivoycapital_a" class="java.lang.Double"/>
+	<parameter name="b1" class="java.lang.String"/>
+	<parameter name="b2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     CARGO.`ID` AS CARGO_ID,
+     CARGO.`CONCEPTO` AS CARGO_CONCEPTO,
+     CARGO.`CANTIDAD` AS CARGO_CANTIDAD,
+     CARGO.`OPERACION_ID` AS CARGO_OPERACION_ID,
+     CARGO.`ESQUEMA_ID` AS CARGO_ESQUEMA_ID
+FROM
+     `CARGO` CARGO]]>
+	</queryString>
+	<field name="CARGO_ID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CARGO_CONCEPTO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CARGO_CANTIDAD" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CARGO_OPERACION_ID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CARGO_ESQUEMA_ID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="425" y="11" width="305" height="34"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="35" width="518" height="20"/>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Balance General Comparativo"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="15" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CARGO_ID}.toString()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="352">
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="833" y="300" width="115" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{pasivoycapital}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="39" y="300" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Suma de activo]]></text>
+			</staticText>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="191" y="300" width="115" height="20"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{totalactivo}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement stretchType="RelativeToBandHeight" x="642" y="0" width="524" height="237" isRemoveLineWhenBlank="true"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="25" y="30" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement markup="none"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{pc_1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="25" y="46" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement markup="none"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{pc_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="25" y="62" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement markup="none"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{pc_3}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="25" y="218" width="131" height="15"/>
+					<textElement/>
+					<text><![CDATA[Suma de pasivo y capital]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="13" y="94" width="48" height="15" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{pf_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement/>
+					<text><![CDATA[Fijo]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="25" y="109" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement markup="none"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{pf_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="25" y="125" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement markup="none"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{pf_2}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="13" y="141" width="87" height="15"/>
+					<textElement/>
+					<text><![CDATA[Suma de pasivo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="156" width="100" height="15"/>
+					<textElement/>
+					<text><![CDATA[Capital]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="13" y="171" width="159" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement markup="none"/>
+					<text><![CDATA[Capital social]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="13" y="187" width="159" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement markup="none"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["Utilidad neta"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="13" y="203" width="87" height="15"/>
+					<textElement/>
+					<text><![CDATA[Suma de capital]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="100" height="15"/>
+					<textElement/>
+					<text><![CDATA[Pasivo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="13" y="15" width="100" height="15" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{pc_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement/>
+					<text><![CDATA[Circulante]]></text>
+				</staticText>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="31" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pc_1_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="47" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pc_2_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="63" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pc_3_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="110" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pf_1_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="126" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pf_2_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00;(¤ #,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="142" width="71" height="15" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{totalpasivo}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="172" width="71" height="16" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{capitals}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="188" width="71" height="16" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{utilidadn}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00;(¤ #,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="204" width="71" height="15" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{totalcapital}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="25" y="78" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement markup="none"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{pc_4}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="79" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pc_4_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="348" y="63" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pc_3_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="348" y="126" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pf_2_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="348" y="47" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pc_2_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="348" y="79" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pc_4_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="348" y="31" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pc_1_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="348" y="110" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{pf_1_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00;(¤ #,##0.00)" isBlankWhenNull="true">
+					<reportElement x="319" y="204" width="100" height="15" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{totalcapital_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="348" y="172" width="71" height="16" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{capitals_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="348" y="188" width="71" height="16" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{utilidadn_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00;(¤ #,##0.00)" isBlankWhenNull="true">
+					<reportElement x="348" y="142" width="71" height="15" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{totalpasivo_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="442" y="204" width="71" height="15" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{totalcapital_a}.doubleValue()-$P{totalcapital}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="442" y="47" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{pc_2_1_a}.doubleValue()-$P{pc_2_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="442" y="63" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{pc_3_1_a}.doubleValue()-$P{pc_3_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="442" y="79" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{pc_4_1_a}.doubleValue()-$P{pc_4_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="442" y="172" width="71" height="16" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{capitals_a}.doubleValue()-$P{capitals}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="442" y="110" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{pf_1_1_a}.doubleValue()-$P{pf_1_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="442" y="31" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{pc_1_1_a}.doubleValue()-$P{pc_1_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="442" y="126" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{pf_2_1_a}.doubleValue()-$P{pf_2_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="442" y="142" width="71" height="15" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{totalpasivo_a}.doubleValue()-$P{totalpasivo}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="442" y="188" width="71" height="16" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+					<textElement textAlignment="Right" markup="none"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{utilidadn_a}.doubleValue()-$P{utilidadn}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="true">
+					<reportElement x="235" y="0" width="71" height="15" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_1_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{b1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="true">
+					<reportElement x="348" y="0" width="71" height="15" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_1_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{b2}]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="true">
+					<reportElement x="442" y="0" width="71" height="15" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_1_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["Diferencia"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="642" height="300" isRemoveLineWhenBlank="true"/>
+				<staticText>
+					<reportElement x="14" y="15" width="60" height="15" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement/>
+					<text><![CDATA[Circulante]]></text>
+				</staticText>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="78" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_4_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_4_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="94" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_5_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_5_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="110" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_6_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_6_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="141" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_1_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_1_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="157" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_2_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_2_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="173" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_3_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_3_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="188" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_4_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_4_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="205" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_5_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_5_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="221" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_6_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_6_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="252" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ad_1_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ad_1_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="268" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ad_2_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ad_2_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="284" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ad_3_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ad_3_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="14" y="126" width="48" height="15" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement/>
+					<text><![CDATA[Fijo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="14" y="237" width="48" height="15" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ad_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement/>
+					<text><![CDATA[Diferido]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="62" height="15"/>
+					<textElement/>
+					<text><![CDATA[Activo]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="252" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{ad_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="30" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{ac_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="141" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{af_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="221" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{af_6}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="62" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{ac_3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="46" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{ac_2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="268" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{ad_2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="189" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{af_4}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="78" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{ac_4}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="205" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{af_5}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="94" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{ac_5}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="284" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{ad_3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="157" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{af_2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="173" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{af_3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="24" y="110" width="147" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{ac_6}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="30" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_1_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_1_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="46" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_2_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_2_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="235" y="62" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_3_1_a}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_3_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="78" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_4_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_4_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="94" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_5_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_5_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="110" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_6_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_6_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="141" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_1_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_1_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="157" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_2_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_2_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="173" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_3_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_3_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="188" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_4_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_4_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="205" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_5_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_5_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="221" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{af_6_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{af_6_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="252" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ad_1_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ad_1_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="268" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ad_2_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ad_2_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="284" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ad_3_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ad_3_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="30" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_1_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_1_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="62" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_3_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_3_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="354" y="46" width="71" height="16" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[Boolean.valueOf($P{ac_2_1}!=null)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$P{ac_2_1_a}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="78" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{ac_4_1_a}.doubleValue()-$P{ac_4_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="94" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{ac_5_1_a}.doubleValue()-$P{ac_5_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="110" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{ac_6_1_a}.doubleValue()-$P{ac_6_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="141" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{af_1_1_a}.doubleValue()-$P{af_1_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="157" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{af_2_1_a}.doubleValue()-$P{af_2_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="173" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{af_3_1_a}.doubleValue()-$P{af_3_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="188" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{af_4_1_a}.doubleValue()-$P{af_4_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="205" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{af_5_1_a}.doubleValue()-$P{af_5_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="221" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{af_6_1_a}.doubleValue()-$P{af_6_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="252" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{ad_1_1_a}.doubleValue()-$P{ad_1_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="268" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{ad_2_1_a}.doubleValue()-$P{ad_2_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="284" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{ad_3_1_a}.doubleValue()-$P{ad_3_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="30" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{ac_1_1_a}.doubleValue()-$P{ac_1_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="62" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{ac_3_1_a}.doubleValue()-$P{ac_3_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="469" y="46" width="71" height="16" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{ac_2_1_a}.doubleValue()-$P{ac_2_1}.doubleValue())]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="true">
+					<reportElement x="235" y="0" width="71" height="15" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{b1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="true">
+					<reportElement x="354" y="0" width="71" height="15" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{b2}]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="true">
+					<reportElement x="469" y="0" width="71" height="15" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["Diferencia"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="310" y="300" width="115" height="20"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{totalactivo_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00;(¤ #,##0.00)">
+				<reportElement x="439" y="300" width="101" height="20"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{totalactivo_a}.doubleValue()-$P{totalactivo}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="961" y="300" width="100" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{pasivoycapital_a}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00;(¤ #,##0.00)" isBlankWhenNull="true">
+				<reportElement x="1072" y="300" width="83" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[Double.valueOf($P{pasivoycapital_a}.doubleValue()-$P{pasivoycapital}.doubleValue())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>
